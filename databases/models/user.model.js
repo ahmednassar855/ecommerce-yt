@@ -37,6 +37,13 @@ const userSchema = mongoose.Schema({
         type: Boolean,
         default: false,
     },
+    question:{
+        type : String,
+    },
+    answer:{
+        type : String,
+        required : true,
+    },
     role: {
         type: String,
         enum: ['user', 'admin', 'seller'],
