@@ -4,6 +4,7 @@ import dotenv from 'dotenv'
 import morgan from 'morgan';
 import dbConnection from './databases/dbConnection.js';
 import authRouter from './src/modules/auth/auth.router.js';
+import cors from 'cors'
 
 // confirgue dotenv
 dotenv.config();
@@ -17,6 +18,7 @@ const app = express()
 
 
 // middleware
+app.use(cors())
 app.use(express.json())
 app.use(morgan('dev'))
 
